@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7BA0190320D0737B00043C6C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA0190220D0737B00043C6C /* main.swift */; };
+		7B6EED8A20D11E0600DDE9BD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6EED8920D11E0600DDE9BD /* main.swift */; };
+		7BA0190320D0737B00043C6C /* SimplePing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA0190220D0737B00043C6C /* SimplePing.swift */; };
+		7BDD801220D170C500047244 /* SimplePingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDD801120D170C500047244 /* SimplePingDelegate.swift */; };
+		7BDD801420D1721300047244 /* ICMP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDD801320D1721300047244 /* ICMP.swift */; };
+		7BDD801620D1745600047244 /* IPv4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDD801520D1745600047244 /* IPv4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +27,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7B6EED8920D11E0600DDE9BD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		7BA018FF20D0737B00043C6C /* SimpleSwiftPing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SimpleSwiftPing; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BA0190220D0737B00043C6C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		7BA0190220D0737B00043C6C /* SimplePing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePing.swift; sourceTree = "<group>"; };
+		7BDD801120D170C500047244 /* SimplePingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePingDelegate.swift; sourceTree = "<group>"; };
+		7BDD801320D1721300047244 /* ICMP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICMP.swift; sourceTree = "<group>"; };
+		7BDD801520D1745600047244 /* IPv4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPv4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +65,11 @@
 		7BA0190120D0737B00043C6C /* SimpleSwiftPing */ = {
 			isa = PBXGroup;
 			children = (
-				7BA0190220D0737B00043C6C /* main.swift */,
+				7BDD801520D1745600047244 /* IPv4.swift */,
+				7BDD801320D1721300047244 /* ICMP.swift */,
+				7BA0190220D0737B00043C6C /* SimplePing.swift */,
+				7BDD801120D170C500047244 /* SimplePingDelegate.swift */,
+				7B6EED8920D11E0600DDE9BD /* main.swift */,
 			);
 			path = SimpleSwiftPing;
 			sourceTree = "<group>";
@@ -94,6 +106,7 @@
 				TargetAttributes = {
 					7BA018FE20D0737B00043C6C = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -119,7 +132,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BA0190320D0737B00043C6C /* main.swift in Sources */,
+				7B6EED8A20D11E0600DDE9BD /* main.swift in Sources */,
+				7BDD801220D170C500047244 /* SimplePingDelegate.swift in Sources */,
+				7BDD801420D1721300047244 /* ICMP.swift in Sources */,
+				7BDD801620D1745600047244 /* IPv4.swift in Sources */,
+				7BA0190320D0737B00043C6C /* SimplePing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +261,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -253,7 +270,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
