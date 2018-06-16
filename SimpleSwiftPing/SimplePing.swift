@@ -93,12 +93,8 @@ public class SimplePing {
 		assert(hostAddress == nil)
 		
 		var context = CFHostClientContext(version: 0, info: unsafeBitCast(self, to: UnsafeMutableRawPointer.self), retain: nil, release: nil, copyDescription: nil)
-//		sock = CFSocketCreateWithNative(nil, fd, CFSocketCallBackType.readCallBack.rawValue, socketReadCallback, &context)
-//		assert(sock != nil)
-		
-		let h = CFHostCreateWithName(nil, hostName as CFString).takeUnretainedValue()
+		let h = CFHostCreateWithName(nil, hostName as CFString).autorelease().takeUnretainedValue()
 		host = h
-//		host = (CFHostRef) CFAutorelease( CFHostCreateWithName(NULL, (__bridge CFStringRef) self.hostName) );
 		
 		CFHostSetClient(h, hostResolveCallback, &context)
 		

@@ -39,11 +39,20 @@ class PingDelegate : SimplePingDelegate {
 	
 }
 
-let delegate = PingDelegate()
-let p = SimplePing(hostName: "9.9.9.9")
-p.delegate = delegate
-p.start()
-
-repeat {
-	RunLoop.current.run(mode: RunLoopMode.defaultRunLoopMode, before: Date.distantFuture)
-} while true
+autoreleasepool{
+	var delegate: PingDelegate? = PingDelegate()
+	var p: SimplePing? = SimplePing(hostName: "9.9.9.9")
+	p?.delegate = delegate
+	p?.start()
+	
+	var i = 0
+	repeat {
+		i += 1
+		RunLoop.current.run(mode: RunLoopMode.defaultRunLoopMode, before: Date.distantFuture)
+	} while i < 2
+	
+	p?.stop()
+	
+	delegate = nil
+	p = nil
+}
