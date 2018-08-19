@@ -103,7 +103,7 @@ class Main : SimplePingDelegate {
 		p.start()
 		
 		repeat {
-			RunLoop.current.run(mode: .defaultRunLoopMode, before: .distantFuture)
+			RunLoop.current.run(mode: .default, before: .distantFuture)
 		} while pinger != nil
 	}
 	

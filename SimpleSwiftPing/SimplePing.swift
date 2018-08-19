@@ -98,7 +98,7 @@ public class SimplePing {
 		
 		CFHostSetClient(h, hostResolveCallback, &context)
 		
-		CFHostScheduleWithRunLoop(h, CFRunLoopGetCurrent(), RunLoopMode.defaultRunLoopMode.rawValue as CFString)
+		CFHostScheduleWithRunLoop(h, CFRunLoopGetCurrent(), RunLoop.Mode.default.rawValue as CFString)
 		
 		var error = CFStreamError()
 		if !CFHostStartInfoResolution(h, CFHostInfoType.addresses, &error) {
